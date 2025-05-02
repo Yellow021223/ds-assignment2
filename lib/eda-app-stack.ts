@@ -8,6 +8,7 @@ import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 import { SqsEventSource } from "aws-cdk-lib/aws-lambda-event-sources";
 import { Duration, RemovalPolicy } from "aws-cdk-lib";
 import { Construct } from "constructs";
+import * as subs from "aws-cdk-lib/aws-sns-subscriptions";
 
 export class EDAAppStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
@@ -64,7 +65,7 @@ export class EDAAppStack extends cdk.Stack {
 
     const deleteInvalidFn = new lambdanode.NodejsFunction(this, "deleteInvalidFn", {
       runtime: lambda.Runtime.NODEJS_22_X,
-      entry: `${__dirname}/../lambdas/mailer.ts`,
+      entry: `${__dirname}/../lambdas/deleteImage.ts`,
       timeout: Duration.seconds(10),
       memorySize: 128,
     });
