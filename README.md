@@ -23,14 +23,6 @@ __Feature:__
 
 
 
-__Feature:__
-+ Photographer:
-  + Log new Images - Completed and Tested.
-  + Metadata updating - Not Attempted
-  + Invalid image removal - Completed and Tested
-  + Status Update Mailer - Attempted.
-+ etc
-
 ### Notes (Optional)
 
 [Any additional information about your solution you wish to draw attention to.]
